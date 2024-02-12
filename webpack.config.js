@@ -4,9 +4,9 @@ module.exports = {
 	entry: './src/index.js',
 	mode: 'production',
 	output: {
-		filename: 'browser.min.js',
+		filename: 'moecounter.min.js',
 		path: path.resolve(__dirname, 'dist'),
-		library: 'emailValidator',
+		library: 'moecounter',
 		libraryTarget: 'window',
 	},
 	devtool: 'source-map',
