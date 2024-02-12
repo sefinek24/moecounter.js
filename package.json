@@ -1,0 +1,32 @@
+{
+  "name": "moecounter.js",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "up": "ncu -u && npm install && npm update && npm audit fix",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sefinek24/moecounter.js.git"
+  },
+  "keywords": [
+    "moecounter",
+    "moecounter.js"
+  ],
+  "author": "Sefinek <contact@sefinek.net> (https://sefinek.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sefinek24/moecounter.js/issues"
+  },
+  "homepage": "https://github.com/sefinek24/moecounter.js#readme",
+  "dependencies": {
+    "axios": "^0.28.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
