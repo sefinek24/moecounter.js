@@ -1,11 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-	const updateButton = document.getElementById('updateCounter');
-	updateButton.addEventListener('click', localDb);
-
-	localDb();
-	remoteDb();
-});
-
 const localDbErrors = document.getElementById('localDb-errors');
 const remoteDbErrors = document.getElementById('remoteDb-errors');
 
@@ -51,3 +43,11 @@ async function remoteDb() {
 		remoteDbErrors.innerHTML = `<b>${new Date().toLocaleTimeString()}:</b> ${err.message}`;
 	}
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+	const updateButton = document.getElementById('updateCounter');
+	updateButton.addEventListener('click', localDb);
+
+	localDb().then(() => console.log('localDb was successfully fetched'));
+	remoteDb().then(() => console.log('remoteDb was successfully fetched'));
+});
