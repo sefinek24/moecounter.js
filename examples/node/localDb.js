@@ -1,8 +1,8 @@
-const moe = require('../../src');
+const moecounter = require('../../src/index.js');
 
 async function showMoeCounter() {
 	try {
-		const data = await moe.localDb.fetch({
+		const data = await moecounter.localDb.fetch({
 			number: 1234567890,
 			length: 10,
 			theme: 'rule34',
@@ -11,7 +11,7 @@ async function showMoeCounter() {
 
 		console.log(data);
 	} catch (err) {
-		console.error(err.message);
+		console.error(err);
 	}
 }
 

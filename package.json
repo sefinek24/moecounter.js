@@ -1,10 +1,10 @@
 {
   "name": "moecounter.js",
   "version": "1.0.0",
-  "description": "Test",
+  "description": "The best moe counters for your projects or websites.",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "node examples/node/localDb.js && node examples/node/remoteDb.js",
     "up": "ncu -u && npm install && npm update && npm audit fix",
     "build": "webpack --config webpack.config.js"
   },
@@ -13,8 +13,24 @@
     "url": "git+https://github.com/sefinek24/moecounter.js.git"
   },
   "keywords": [
+    "anime",
+    "anime-counter",
+    "anime-counters",
+    "catgirl-counter",
+    "catgirl-counters",
+    "catgirls-counter",
+    "catgirls-counters",
+    "counter",
+    "counters",
+    "moe",
+    "moe-counter",
+    "moe-counter.js",
     "moecounter",
-    "moecounter.js"
+    "moecounter.js",
+    "neko",
+    "neko-counter",
+    "neko-counters",
+    "nekos"
   ],
   "author": "Sefinek <contact@sefinek.net> (https://sefinek.net)",
   "license": "MIT",
