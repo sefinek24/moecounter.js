@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/sefinek24/moecounter.js#readme",
   "dependencies": {
-    "axios": "^0.28.0"
+    "axios": "^1.6.7"
   },
   "devDependencies": {
     "webpack": "^5.90.1",

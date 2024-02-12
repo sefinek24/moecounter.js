@@ -12,15 +12,11 @@ async function localDb({ number = 0, length = 10, theme = 'rule34', pixelated = 
 	const params = { number, length, theme, pixelated };
 	const fullUrl = axios.getUri({ url: 'https://api.sefinek.net/api/v2/moecounter', params });
 
-	try {
-		const response = await axios.get(fullUrl, {
-			responseType: 'text',
-		});
+	const response = await axios.get(fullUrl, {
+		responseType: 'text',
+	});
 
-		return { url: fullUrl, svg: response.data };
-	} catch (error) {
-		throw new Error(`Failed to generate Moe counter: ${error.message}`);
-	}
+	return { url: fullUrl, svg: response.data };
 }
 
 /**
@@ -35,15 +31,12 @@ async function remoteDb({ name, length = 10, theme = 'rule34', pixelated = true 
 	const params = { length, theme, pixelated };
 	const fullUrl = axios.getUri({ url: `https://api.sefinek.net/api/v2/moecounter/@${name}`, params });
 
-	try {
-		const response = await axios.get(fullUrl, {
-			responseType: 'text',
-		});
+	const response = await axios.get(fullUrl, {
+		responseType: 'text',
+	});
 
-		return { url: fullUrl, svg: response.data };
-	} catch (error) {
-		throw new Error(`Failed to generate Moe counter: ${error.message}`);
-	}
+	return { url: fullUrl, svg: response.data };
+
 }
 
 module.exports = {

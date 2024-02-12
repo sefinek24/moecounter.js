@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Moecounter.js</title>
+
+    <link rel="stylesheet" href="data/style.css">
+</head>
+<body>
+    <h1>Moecounter.js demonstration</h1>
+    <hr>
+
+    <!-- 1 -->
+    <h2>Local control</h2>
+    <p>
+        W tej wersji to Ty zarządzasz cyframi w liczniku moecounter.<br>Możesz zintegrować licznik ze swoją bazą danych i wyświetlać konkretne liczby w liczniku, które tylko zechcesz.
+    </p>
+
+    <img src="#" id="localDb" alt="localDb">
+    <div id="options">
+        <input type="number" id="counterValue" value="1234567890" placeholder="Enter counter value">
+        <input type="number" id="lengthValue" value="10" placeholder="Enter counter length">
+        <select id="theme">
+            <option value="asoul">asoul</option>
+            <option value="gelbooru">gelbooru</option>
+            <option value="moebooru">moebooru</option>
+            <option value="rule34" selected>rule34</option>
+        </select>
+        <select id="pixelated">
+            <option value="true">Pixelated: true (recommended)</option>
+            <option value="false">Pixelated: false</option>
+        </select>
+    </div>
+    <button id="updateCounter">Update Counter</button>
+
+    <h4>Last error:</h4>
+    <code id="localDb-errors">N/A</code>
+
+
+    <!-- 2 -->
+    <h2>Remote control</h2>
+    <p>
+        Tutaj natomiast licznik jest kontrolowany przez naszą bazę danych. Cyfra w liczniku będzie inkrementowana, gdy ktoś odwiedzi adres url wygenerowany przez moduł moecounter.js.<br>
+        Poniżej jest zaprezentowany przykład z liczbą wyświetleń tej strony. Licznik posiada ratelimity. Maksymalnie dozwolone jest 1 wyświetlenie w ciągu 20 minut z tego samego adresu IP.
+    </p>
+
+    <img src="#" id="remoteDb" alt="remoteDb">
+
+    <h4>Last error:</h4>
+    <code id="remoteDb-errors">N/A</code>
+
+    <script src="data/script.js"></script>
+
+    <!-- JS -->
+    <script src="../../dist/moecounter.min.js"></script>
+</body>
+</html>

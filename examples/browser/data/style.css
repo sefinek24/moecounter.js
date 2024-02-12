@@ -1,0 +1,52 @@
+body {
+    background-color: #21252b;
+    color: #fff;
+    text-align: center;
+    font-family: "HoloLens MDL2 Assets", sans-serif;
+}
+h2 {
+    margin-bottom: 5px;
+}
+h4 {
+    margin-bottom: 0;
+}
+p {
+    padding-top: 0;
+    margin-top: 0;
+}
+code {
+    color: red;
+}
+#options {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+input, option {
+    background-color: #282c34;
+}
+input {
+    color: #f6ffff;
+}
+option {
+    color: #fff
+}
+
+button {
+    background: #196BCA linear-gradient(to right, #196BCA, #6433E0);
+    color: #fff;
+    font-family: Trebuchet MS,sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    text-decoration: none;
+    padding: 4px 15px;
+    border: 0 solid #000;
+    border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+button:hover{
+    background: #196BCA linear-gradient(to right, #5482d0, #7d5ee3);
+}
+button:active{
+    background: #196BCA linear-gradient(to right, rgba(84, 130, 208, 0.8), rgba(84, 130, 208, 0.5));
+}

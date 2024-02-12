@@ -7,7 +7,8 @@ module.exports = {
 		filename: 'moecounter.min.js',
 		path: path.resolve(__dirname, 'dist'),
 		library: 'moecounter',
-		libraryTarget: 'window',
+		libraryTarget: 'umd',
+		globalObject: 'this',
 	},
 	devtool: 'source-map',
 };

@@ -1,9 +1,9 @@
-const moe = require('../src');
+const moe = require('../../src');
 
 async function showMoeCounter() {
 	try {
-		const data = await moe.remoteDb.fetch({
-			name: 'test-12345',
+		const data = await moe.localDb.fetch({
+			number: 1234567890,
 			length: 10,
 			theme: 'rule34',
 			pixelated: true,
