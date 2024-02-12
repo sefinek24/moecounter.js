@@ -22,7 +22,7 @@ async function localDb() {
 		localDbErrors.textContent = 'N/A';
 	} catch (err) {
 		console.error(err);
-		localDbErrors.innerHTML = `<b>${new Date().toLocaleTimeString()}:</b> ${err.message}`;
+		localDbErrors.innerHTML = `<b>${new Date().toLocaleTimeString()}:</b> ${err.message}${err.response && err.response.data ? `<br><b>Response:</b> ${err.response.data}` : err }`;
 	} finally {
 		updateButton.disabled = false;
 	}
@@ -47,6 +47,9 @@ async function remoteDb() {
 document.addEventListener('DOMContentLoaded', () => {
 	const updateButton = document.getElementById('updateCounter');
 	updateButton.addEventListener('click', localDb);
+
+	const versionSpan = document.getElementById('version');
+	versionSpan.textContent = `v${moecounter.version}`;
 
 	localDb().then(() => console.log('localDb was successfully fetched'));
 	remoteDb().then(() => console.log('remoteDb was successfully fetched'));

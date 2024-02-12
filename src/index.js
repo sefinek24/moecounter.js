@@ -1,4 +1,5 @@
 const axios = require('axios');
+const { version } = require('../package.json');
 
 /**
  * Asynchronous function to generate a Moe counter in SVG format.
@@ -46,5 +47,5 @@ module.exports = {
 	remoteDb: {
 		fetch: remoteDb,
 	},
+	version,
 };
-

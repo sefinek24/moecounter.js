@@ -5,6 +5,10 @@ body {
     font-family:"HoloLens MDL2 Assets",sans-serif
 }
 
+h1 {
+    margin-bottom:7px
+}
+
 h2 {
     margin-bottom:5px
 }
@@ -19,7 +23,7 @@ p {
 }
 
 code {
-    color:red
+    color:#e63716
 }
 
 #options {
