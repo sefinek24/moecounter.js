@@ -4,7 +4,7 @@ module.exports = {
 	entry: './src/index.js',
 	mode: 'production',
 	output: {
-		filename: 'moecounter.min.js',
+		filename: 'browser/moecounter.min.js',
 		path: path.resolve(__dirname, 'dist'),
 		library: 'moecounter',
 		libraryTarget: 'umd',
