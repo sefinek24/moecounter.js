@@ -19,10 +19,9 @@ async function localDb() {
 		});
 
 		document.getElementById('localDb').src = moe.url;
-		localDbErrors.textContent = 'N/A';
+		localDbErrors.textContent = 'None';
 	} catch (err) {
-		console.error(err);
-		localDbErrors.innerHTML = `<b>${new Date().toLocaleTimeString()}:</b> ${err.message}${err.response && err.response.data ? `<br><b>Response:</b> ${err.response.data}` : err }`;
+		localDbErrors.innerHTML = `<b>${new Date().toLocaleTimeString()}:</b> ${err.response && err.response.data ? err.response.data : err.message }`;
 	} finally {
 		updateButton.disabled = false;
 	}
@@ -36,11 +35,11 @@ async function remoteDb() {
 			theme: 'rule34',
 			pixelated: true,
 		});
+
 		document.getElementById('remoteDb').src = moe.url;
-		remoteDbErrors.textContent = 'N/A';
+		remoteDbErrors.textContent = 'None';
 	} catch (err) {
-		console.error(err);
-		remoteDbErrors.innerHTML = `<b>${new Date().toLocaleTimeString()}:</b> ${err.message}`;
+		remoteDbErrors.innerHTML = `<b>${new Date().toLocaleTimeString()}:</b> ${err.response && err.response.data ? err.response.data : err.message }`;
 	}
 }
 

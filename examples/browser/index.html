@@ -2,58 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>MoeCounter.js</title>
+    <title>MoeCounter.js - Enhance Your Projects with Cute Counters</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
     <link rel="stylesheet" href="data/style.css">
 </head>
 <body>
-    <h1>🔢 MoeCounter.js Demonstration - The best counters for your projects</h1>
-    <b>Version:</b> <span id="version">Waiting...</span>
-    <hr>
+    <div id="container">
+        <!-- Header -->
+        <h1>MoeCounter.js Demonstration - Enhance Your Projects with Cute Counters</h1>
+        <p id="header-desc">
+            <strong>Version:</strong> <span id="version">Loading...</span> •
+            <strong>GitHub repo:</strong> <a href="https://github.com/sefinek24/moecounter.js" target="_blank">sefinek24/moecounter.js</a>
+        </p>
+        <hr>
 
-    <!-- Local control -->
-    <h2>💻 Local Control</h2>
-    <p>
-        In this version, you manage the digits in the moecounter. <br>
-        You can integrate the counter with your database and display specific numbers in the counter as you wish.
-    </p>
 
-    <img src="#" id="localDb" alt="localDb">
-    <div id="options">
-        <input type="number" id="counterValue" value="1234567890" placeholder="Enter counter value">
-        <input type="number" id="lengthValue" value="10" placeholder="Enter counter length">
-        <select id="theme">
-            <option value="asoul">asoul</option>
-            <option value="gelbooru">gelbooru</option>
-            <option value="moebooru">moebooru</option>
-            <option value="rule34" selected>rule34</option>
-        </select>
-        <select id="pixelated">
-            <option value="true">Pixelated: true (recommended)</option>
-            <option value="false">Pixelated: false</option>
-        </select>
+        <!-- Section: Local Control -->
+        <section id="local-control">
+            <div id="local-control-text">
+                <h2>Local Control</h2>
+                <p>
+                    In this version, you have control over the numbers displayed by the moecounter.<br>
+                    You can link the counter to your database and showcase specific figures on the counter according to your requirements.
+                </p>
+
+                <img src="#" id="localDb" alt="moecounter.localDb.fetch">
+
+                <h3>Last Error</h3>
+                <p><code id="localDb-errors">N/A</code></p>
+            </div>
+
+            <div id="local-control-config">
+                <div id="options">
+                    <label for="counterValue"></label>
+                    <input type="number" id="counterValue" value="1234567890" placeholder="Enter counter value">
+
+                    <label for="lengthValue"></label>
+                    <input type="number" id="lengthValue" value="10" placeholder="Enter counter length">
+
+                    <label for="theme"></label>
+                    <select id="theme">
+                        <option value="asoul">Asoul</option>
+                        <option value="gelbooru">Gelbooru</option>
+                        <option value="moebooru">Moebooru</option>
+                        <option value="rule34" selected>Rule34</option>
+                    </select>
+
+                    <label for="pixelated"></label>
+                    <select id="pixelated">
+                        <option value="true" selected>Pixelated: True (recommended)</option>
+                        <option value="false">Pixelated: False</option>
+                    </select>
+                </div>
+
+                <button id="updateCounter">Update Counter</button>
+            </div>
+        </section>
+
+        <!-- Section: Remote Control -->
+        <section id="remote-control">
+            <div id="remote-control-img">
+                <img src="#" id="remoteDb" alt="moecounter.remoteDb.fetch">
+            </div>
+
+            <div id="remote-control-text">
+                <h2>Remote Control</h2>
+                <p>
+                    Here, our database oversees the counter, guaranteeing that every visit to the URL created by the <a href="https://www.npmjs.com/package/moecounter.js">moecounter.js</a> module leads to an increment in the counter's tally.
+                    To deter misuse, the counter applies rate limits; it registers just one view per IP address within a 20-minute interval.
+                    Therefore, if the rate limit is surpassed, the counter will not increase, preserving the statistics' integrity and precision.
+                    Below, an example demonstrates this page's view count.
+                </p>
+
+                <h3>Last Error</h3>
+                <p><code id="remoteDb-errors">N/A</code></p>
+            </div>
+        </section>
     </div>
-    <button id="updateCounter">Update Counter</button>
 
-    <h4>🐛 Last error:</h4>
-    <code id="localDb-errors">N/A</code>
-
-
-    <!-- Remote control -->
-    <h2>🌍 Remote Control</h2>
-    <p>
-        Here, the counter is controlled by our database. The digit in the counter will be incremented when someone visits the URL generated by the moecounter.js module. <br>
-        Below is an example with the number of views of this page. The counter has rate limits. Only 1 view from the same IP address is allowed within <b>20 minutes</b>.
-    </p>
-
-    <img src="#" id="remoteDb" alt="remoteDb">
-
-    <h4>🐛 Last error:</h4>
-    <code id="remoteDb-errors">N/A</code>
-
-
-    <!-- JavaScript -->
     <script src="../../dist/moecounter.min.js"></script>
     <script src="data/script.js"></script>
 </body>

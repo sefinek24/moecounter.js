@@ -2,16 +2,6 @@
   "name": "moecounter.js",
   "version": "1.0.0",
   "description": "The best moe counters for your projects or websites.",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "node examples/node/localDb.js && node examples/node/remoteDb.js",
-    "up": "ncu -u && npm install && npm update && npm audit fix",
-    "build": "webpack --config webpack.config.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sefinek24/moecounter.js.git"
-  },
   "keywords": [
     "anime",
     "anime-counter",
@@ -32,12 +22,23 @@
     "neko-counters",
     "nekos"
   ],
-  "author": "Sefinek <contact@sefinek.net> (https://sefinek.net)",
-  "license": "MIT",
+  "homepage": "https://github.com/sefinek24/moecounter.js#readme",
   "bugs": {
     "url": "https://github.com/sefinek24/moecounter.js/issues"
   },
-  "homepage": "https://github.com/sefinek24/moecounter.js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sefinek24/moecounter.js.git"
+  },
+  "license": "MIT",
+  "author": "Sefinek <contact@sefinek.net> (https://sefinek.net)",
+  "main": "src/index.js",
+  "typings": "index.d.ts",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "node examples/node/localDb.js && node examples/node/remoteDb.js",
+    "up": "ncu -u && npm install && npm update && npm audit fix"
+  },
   "dependencies": {
     "axios": "^1.6.7"
   },
