@@ -52,7 +52,7 @@ A dedicated page with documentation and examples, etc., will be launched soon.
 
 
 ## 📃 Documentation
-### moecounter.local(options)
+### `moecounter.local(options)`
 Generates a visual counter based on the provided options.
 Using the local function, developers have the ability to specify the exact value they want to display on the counter.
 In such cases, using your own database is recommended.
@@ -66,7 +66,7 @@ For the purposes of displaying any kind of statistics, the BELOW method is prefe
 * `pixelated` - `(default true; recommended true)`: Should the counter be pixelated?
 * `svg` - `(default false; recommended false)`: Should the module provide SVG data?
 
-### moecounter.remote(options)
+### `moecounter.remote(options)`
 In this setup, the API server manages the counter.
 Developers do not have the capability to modify the counter value.
 When a user visits a webpage containing the counter (with a link to api.sefinek.net), the counter value will be incremented by 1.
