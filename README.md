@@ -22,7 +22,7 @@ npm install moecounter.js
 ```
 ### Browser
 ```html
-<script src="https://cdn.jsdelivr.net/npm/moecounter.js@0/dist/browser/moecounter.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moecounter.js@0/dist/browser/moecounter.min.js"></script>
 ```
 
 
