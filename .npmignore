@@ -1,3 +1,4 @@
 .github
 .eslintrc.js
+assets
 webpack.config.js
