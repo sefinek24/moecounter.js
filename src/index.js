@@ -39,6 +39,8 @@ async function httpsGet(requestUrl, options = {}) {
 async function fetchSvgData(baseUrl, queryParams) {
 	try {
 		const fullUrl = constructUrl(baseUrl, queryParams);
+		if (!queryParams.svg) return { url: fullUrl };
+
 		const svgData = await httpsGet(fullUrl);
 		return { url: fullUrl, svg: svgData };
 	} catch (err) {
@@ -57,11 +59,7 @@ async function remoteDb(options) {
 }
 
 module.exports = {
-	localDb: {
-		fetch: localDb,
-	},
-	remoteDb: {
-		fetch: remoteDb,
-	},
+	local: localDb,
+	remote: remoteDb,
 	version,
 };

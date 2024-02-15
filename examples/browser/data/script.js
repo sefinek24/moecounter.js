@@ -2,8 +2,8 @@ const localDbErrors = document.getElementById('localDb-errors');
 const remoteDbErrors = document.getElementById('remoteDb-errors');
 
 async function localDb() {
-	const updateButton = document.getElementById('updateCounter');
-	updateButton.disabled = true;
+	// const updateButton = document.getElementById('updateCounter');
+	// updateButton.disabled = true;
 
 	try {
 		const counterValue = document.getElementById('counterValue').value || 1234567890;
@@ -11,7 +11,7 @@ async function localDb() {
 		const theme = document.getElementById('theme').value;
 		const pixelated = document.getElementById('pixelated').value === 'true';
 
-		const moe = await moecounter.localDb.fetch({
+		const moe = await moecounter.local({
 			number: parseInt(counterValue, 10),
 			length: parseInt(lengthValue, 10),
 			theme: theme,
@@ -20,16 +20,21 @@ async function localDb() {
 
 		document.getElementById('localDb').src = moe.url;
 		localDbErrors.textContent = 'None';
+
+		document.getElementById('api-url').textContent = moe.url;
 	} catch (err) {
 		localDbErrors.innerHTML = `<b>${new Date().toLocaleTimeString()}:</b> ${err.response && err.response.data ? err.response.data : err.message }`;
-	} finally {
+	}
+	/*
+	finally {
 		updateButton.disabled = false;
 	}
+	*/
 }
 
 async function remoteDb() {
 	try {
-		const moe = await moecounter.remoteDb.fetch({
+		const moe = await moecounter.remote({
 			name: 'npm-test-counter',
 			length: 10,
 			theme: 'rule34',
@@ -44,8 +49,10 @@ async function remoteDb() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	const updateButton = document.getElementById('updateCounter');
-	updateButton.addEventListener('click', localDb);
+	document.getElementById('counterValue').addEventListener('change', localDb);
+	document.getElementById('lengthValue').addEventListener('change', localDb);
+	document.getElementById('theme').addEventListener('change', localDb);
+	document.getElementById('pixelated').addEventListener('change', localDb);
 
 	const versionSpan = document.getElementById('version');
 	versionSpan.textContent = `v${moecounter.version}`;

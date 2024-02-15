@@ -2,11 +2,12 @@ const moecounter = require('../../src/index.js');
 
 async function showMoeCounter() {
 	try {
-		const data = await moecounter.localDb.fetch({
+		const data = await moecounter.local({
 			number: 1234567890,
 			length: 10,
 			theme: 'rule34',
 			pixelated: true,
+			svg: false,
 		});
 
 		console.log(data);
