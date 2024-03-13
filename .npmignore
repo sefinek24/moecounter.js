@@ -1,5 +1,3 @@
-.idea
 .github
+.idea
 .eslintrc.js
-assets
-webpack.config.js
