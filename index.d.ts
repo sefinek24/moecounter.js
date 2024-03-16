@@ -52,7 +52,7 @@ declare module 'moecounter.js' {
      *     number: 1234567890,
      *     length: 10,
      *     theme: 'rule34',
-     *     pixelated: true,
+     *     pixelated: true
      * });
      * @param options Counter options, including the number to be displayed.
      * @returns A Promise object that resolves to an SvgResult object containing the SVG code and the URL of the generated counter image.
@@ -92,7 +92,7 @@ declare module 'moecounter.js' {
      *     name: 'test-12345',
      *     length: 10,
      *     theme: 'rule34',
-     *     pixelated: true,
+     *     pixelated: true
      * });
      * @param options Options, including the unique name of the counter.
      * @returns A Promise object that resolves to an SvgResult object containing the SVG code and the URL of the generated counter image. To increment the number in the database, the user must visit the generated link.
