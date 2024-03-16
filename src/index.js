@@ -1,62 +1,46 @@
-const axios = require('axios');
 const { name: packageName, version } = require('../package.json');
 const apiUrl = 'https://api.sefinek.net/api/v2/moecounter';
 const userAgent = `${packageName}/${version} (+https://github.com/sefinek24/moecounter.js)`;
 
-function constructUrl(baseUrl, params) {
+const constructUrl = (baseUrl, params) => {
 	const queryString = Object.entries(params)
-		.map(([key, value]) => {
-			if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
-				return `${encodeURIComponent(key)}=${encodeURIComponent(String(value))}`;
-			} else {
-				console.warn(`Warning: Parameter type '${key}' is not supported.`);
-				return '';
-			}
-		})
-		.filter(part => part.length > 0)
+		.filter(([, value]) => ['string', 'number', 'boolean'].includes(typeof value))
+		.map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(String(value))}`)
 		.join('&');
-
 	return `${baseUrl}?${queryString}`;
-}
+};
 
-async function httpsGet(requestUrl, options = {}) {
+const httpsGet = async (requestUrl, options = {}) => {
 	try {
-		const response = await axios.get(requestUrl, {
-			...options,
+		const response = await fetch(requestUrl, {
+			method: 'GET',
 			headers: {
 				'User-Agent': userAgent,
 				...options.headers,
 			},
+			...options,
 		});
 
-		return response.data;
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
+		return await response.text();
 	} catch (err) {
 		console.error('HTTPS GET request failed:', err);
 		throw err;
 	}
-}
+};
 
-async function fetchSvgData(baseUrl, queryParams) {
-	try {
-		const fullUrl = constructUrl(baseUrl, queryParams);
-		if (!queryParams.svg) return { url: fullUrl };
+const fetchSvgData = async (baseUrl, queryParams) => {
+	const fullUrl = constructUrl(baseUrl, queryParams);
+	if (!queryParams.svg) return { url: fullUrl };
 
-		const svgData = await httpsGet(fullUrl);
-		return { url: fullUrl, svg: svgData };
-	} catch (err) {
-		console.error('Error fetching SVG data:', err);
-		throw err;
-	}
-}
+	const svgData = await httpsGet(fullUrl);
+	return { url: fullUrl, svg: svgData };
+};
 
-async function localDb(options) {
-	return fetchSvgData(apiUrl, { ...options, number: options.number ?? 0 });
-}
-
-async function remoteDb(options) {
-	const { name: counterName, ...restOptions } = options;
-	return fetchSvgData(`${apiUrl}/@${counterName}`, restOptions);
-}
+const localDb = async (options) => fetchSvgData(apiUrl, { number: 0, ...options });
+const remoteDb = async ({ name: counterName, ...restOptions }) => fetchSvgData(`${apiUrl}/@${counterName}`, restOptions);
 
 module.exports = {
 	local: localDb,

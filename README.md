@@ -86,23 +86,19 @@ Remember to inform users that their IP addresses are collected on an external se
 const moecounter = require('moecounter.js');
 
 const showMoeCounter = async () => {
-	try {
-		const data = await moecounter.local({
-			number: 1234567890,
-			length: 10,
-			theme: 'rule34',
-			pixelated: true,
-			svg: false
-		});
+	const data = await moecounter.local({
+		number: 1234567890,
+		length: 10,
+		theme: 'rule34',
+		pixelated: true,
+		svg: false
+	});
 
-		console.log(data);
-		// Output:
-		// {
-		// 	url: 'https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=rule34&pixelated=true&svg=false'
-		// }
-	} catch (err) {
-		console.error(err);
-	}
+	console.log(data);
+	// Output:
+	// {
+	// 	url: 'https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=rule34&pixelated=true&svg=false'
+	// }
 }
 
 showMoeCounter();
