@@ -16,7 +16,7 @@ MoeCounter is excellent for use as a views counter, visits counter, online users
 
 
 ## 📦 Installation
-### NPM
+### npm
 ```bash
 npm install moecounter.js
 ```
@@ -24,6 +24,10 @@ npm install moecounter.js
 ```html
 <script src="https://cdn.jsdelivr.net/npm/moecounter.js@0/dist/browser/moecounter.min.js"></script>
 ```
+
+
+## 🌍 Demo
+https://sefinek.net/npm/moecounter.js/demo
 
 
 ## 😸 Counters
@@ -47,8 +51,6 @@ npm install moecounter.js
 ## 🍴 Fork
 This project is an enhanced fork of [journey-ad/Moe-Counter](https://github.com/journey-ad/Moe-Counter).
 It features improved rate limit handling and enhanced server-side code quality.
-A dedicated page with documentation and examples, etc., will be launched soon.
-![](assets/brave_Ha0AnEhciEQq.png)
 
 
 ## 📃 Documentation
@@ -92,7 +94,7 @@ const showMoeCounter = async () => {
 			length: 10,
 			theme: 'rule34',
 			pixelated: true,
-			svg: false,
+			svg: false
 		});
 
 		console.log(data);
