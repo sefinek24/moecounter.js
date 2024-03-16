@@ -108,6 +108,7 @@ const showMoeCounter = async () => {
 showMoeCounter();
 ```
 
+> [!NOTE]  
 > If you want to see a sample counter in action, visit this page: https://sefinek.net/genshin-impact-reshade
 
 
