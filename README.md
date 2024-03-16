@@ -77,8 +77,8 @@ If this limit is exceeded, the server will NOT return any HTTP error, but simply
 * `pixelated` - `(default true; recommended true)`: Should the counter be pixelated?
 * `svg` - `(default false; recommended false)`: Should the module provide SVG data?
 
-    > [!IMPORTANT]  
-    Remember to inform users that their IP addresses are collected on an external server (api.sefinek.net)! If you use the counter exclusively on GitHub (in repositories, etc.), you do not need to do this.
+> [!IMPORTANT]  
+Remember to inform users that their IP addresses are collected on an external server (api.sefinek.net)! If you use the counter exclusively on GitHub (in repositories, etc.), you do not need to do this.
 
 
 ## 🤔 Example
