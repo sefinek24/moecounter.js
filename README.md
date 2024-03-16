@@ -76,7 +76,7 @@ An increment is allowed once every 20 minutes from the same IP address.
 If this limit is exceeded, the server will NOT return any HTTP error, but simply will not increase the counter value.
 
 #### options
-* `name` - `(required)`: A unique counter name. It is best to choose a unique name that reflects the purpose of the counter. It's also a good idea to add random characters at the end, e.g., `mywebsiteviews=sM7JJb2trEr9`.
+* `name` - `(required)`: A unique counter name. It is best to choose a unique name that reflects the purpose of the counter. It's also a good idea to add random characters at the end, e.g., `mywebsiteviews-sM7JJb2trEr9`.
 * `length` - `(default 10)`: The length of the counter.
 * `theme` - `(default rule34)`: The appearance of the counter.
 * `pixelated` - `(default true; recommended true)`: Should the counter be pixelated?
