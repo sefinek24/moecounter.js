@@ -36,7 +36,7 @@
   "typings": "index.d.ts",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "test": "node examples/node/localDb.js && node examples/node/remoteDb.js",
+    "test": "node examples/localDb.js && node examples/remoteDb.js",
     "up": "ncu -u && npm install && npm update && npm audit fix"
   },
   "dependencies": {

@@ -1,9 +1,9 @@
-const moecounter = require('../../src/index.js');
+const moecounter = require('../src');
 
 async function showMoeCounter() {
 	try {
-		const data = await moecounter.local({
-			number: 1234567890,
+		const data = await moecounter.remote({
+			name: 'test-12345',
 			length: 10,
 			theme: 'rule34',
 			pixelated: true,
