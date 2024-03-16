@@ -1,7 +1,7 @@
 {
   "name": "moecounter.js",
-  "version": "0.1.0",
-  "description": "The most effective and efficient moecounters for your projects, designed to display a wide range of statistics for your website and more!",
+  "version": "1.0.0",
+  "description": "The most effective and efficient MoeCounters for your projects, designed to display a wide range of statistics for your website and more!",
   "keywords": [
     "anime",
     "anime-counter",
@@ -22,7 +22,7 @@
     "neko-counters",
     "nekos"
   ],
-  "homepage": "https://github.com/sefinek24/moecounter.js#readme",
+  "homepage": "https://sefinek.net/npm/moecounter.js/demo",
   "bugs": {
     "url": "https://github.com/sefinek24/moecounter.js/issues"
   },
