@@ -10,10 +10,10 @@
 </div>
 
 
-MoeCounter.js is a JavaScript library that enables easy integration of attractive visual counters into your web projects.
-With a variety of appearances and customization options, you can add a unique flair to your website or application.
-MoeCounter is excellent for use as a views counter, visits counter, online users counter, subscribers counter, followers counter, etc.
-
+MoeCounter.js is a JavaScript library that allows for easy integration of attractive visual counters into your web projects or profiles, such as GitHub.
+With a variety of appearances and customization options, you can add a unique style to your website or application.
+MoeCounter is perfectly suited for use as a view counter, visit counter, online user counter, subscriber counter, follower counter, etc.
+It can be seamlessly used on any website or in applications that utilize WebView2.
 
 ## 📦 Installation
 ### npm
@@ -48,11 +48,6 @@ https://sefinek.net/npm/moecounter.js/demo
 `https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=rule34&pixelated=true`
 
 
-## 🍴 Fork
-This project is an enhanced fork of [journey-ad/Moe-Counter](https://github.com/journey-ad/Moe-Counter).
-It features improved rate limit handling and enhanced server-side code quality.
-
-
 ## 📃 Documentation
 ### `moecounter.local(options)`
 Generates a visual counter based on the provided options.
@@ -81,6 +76,9 @@ If this limit is exceeded, the server will NOT return any HTTP error, but simply
 * `theme` - `(default rule34)`: The appearance of the counter.
 * `pixelated` - `(default true; recommended true)`: Should the counter be pixelated?
 * `svg` - `(default false; recommended false)`: Should the module provide SVG data?
+
+> [!IMPORTANT]  
+Remember to inform users that their IP addresses are collected on an external server (api.sefinek.net)! If you use the counter exclusively on GitHub (in repositories, etc.), you do not need to do this.
 
 
 ## 🤔 Example
@@ -112,10 +110,17 @@ showMoeCounter();
 
 > If you want to see a sample counter in action, visit this page: https://sefinek.net/genshin-impact-reshade
 
+
+## 🍴 Fork
+This project is an enhanced fork of [journey-ad/Moe-Counter](https://github.com/journey-ad/Moe-Counter).
+It features improved rate limit handling and enhanced server-side code quality.
+
+
 ## 💙 Thank you
 If you like this module, please **star** ⭐ the [repository](https://github.com/sefinek24/moecounter.js).
 
 If you have any questions or need help, feel free to reach out to me via [email](https://sefinek.net) or open a new [Issue](https://github.com/sefinek24/moecounter.js/issues).
+
 
 ## 🔑 License
 This module is provided under the `MIT License`. See the [LICENSE](LICENSE) file for more details.
