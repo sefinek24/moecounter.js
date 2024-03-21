@@ -42,8 +42,4 @@ const fetchSvgData = async (baseUrl, queryParams) => {
 const local = async (options) => fetchSvgData(apiUrl, { number: 0, ...options });
 const remote = async ({ name: counterName, ...restOptions }) => fetchSvgData(`${apiUrl}/@${counterName}`, restOptions);
 
-module.exports = {
-	local,
-	remote,
-	version,
-};
+module.exports = { local, remote, version };
