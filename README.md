@@ -9,11 +9,11 @@
     </a>
 </div>
 
-
 MoeCounter.js is a JavaScript library that allows for easy integration of attractive visual counters into your web projects or profiles, such as GitHub.
 With a variety of appearances and customization options, you can add a unique style to your website or application.
 MoeCounter is perfectly suited for use as a view counter, visit counter, online user counter, subscriber counter, follower counter, etc.
 It can be seamlessly used on any website or in applications that utilize WebView2.
+
 
 ## 📦 Installation
 ### npm
