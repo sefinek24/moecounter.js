@@ -1,4 +1,4 @@
-const moecounter = require('../src');
+const moecounter = require('../src/index.js');
 
 async function showMoeCounter() {
 	try {
