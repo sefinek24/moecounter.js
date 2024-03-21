@@ -39,11 +39,11 @@ const fetchSvgData = async (baseUrl, queryParams) => {
 	return { url: fullUrl, svg: svgData };
 };
 
-const localDb = async (options) => fetchSvgData(apiUrl, { number: 0, ...options });
-const remoteDb = async ({ name: counterName, ...restOptions }) => fetchSvgData(`${apiUrl}/@${counterName}`, restOptions);
+const local = async (options) => fetchSvgData(apiUrl, { number: 0, ...options });
+const remote = async ({ name: counterName, ...restOptions }) => fetchSvgData(`${apiUrl}/@${counterName}`, restOptions);
 
 module.exports = {
-	local: localDb,
-	remote: remoteDb,
+	local,
+	remote,
 	version,
 };
