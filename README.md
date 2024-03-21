@@ -20,11 +20,11 @@ It can be seamlessly used on any website or in applications that utilize WebView
 ```bash
 npm install moecounter.js
 ```
+
 ### Browser
 ```html
 <script src="https://cdn.jsdelivr.net/npm/moecounter.js@1/dist/browser/moecounter.min.js"></script>
 ```
-
 
 ## 🌍 Demo
 https://sefinek.net/npm/moecounter.js/demo
