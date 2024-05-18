@@ -16,9 +16,9 @@ const httpsGet = async (requestUrl, options = {}) => {
 			method: 'GET',
 			headers: {
 				'User-Agent': userAgent,
-				...options.headers,
+				...options.headers
 			},
-			...options,
+			...options
 		});
 
 		if (!response.ok) {

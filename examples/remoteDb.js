@@ -7,7 +7,7 @@ async function showMoeCounter() {
 			length: 10,
 			theme: 'rule34',
 			pixelated: true,
-			svg: false,
+			svg: false
 		});
 
 		console.log(data);
@@ -23,7 +23,7 @@ async function getMoeCounterSvg() {
 			length: 10,
 			theme: 'rule34',
 			pixelated: true,
-			svg: true,
+			svg: true
 		});
 
 		console.log(data);
