@@ -52,6 +52,6 @@ export default [
 			'wrap-regex': 'error',
 			'yoda': 'error'
 		},
-		ignores: ['artifacts', 'node_modules', '**/artifacts', '**/node_modules']
+		ignores: ['node_modules', '*.min.js']
 	}
 ];
