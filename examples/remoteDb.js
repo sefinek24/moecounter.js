@@ -5,7 +5,7 @@ async function showMoeCounter() {
 		const data = await moecounter.remote({
 			name: 'test-12345',
 			length: 10,
-			theme: 'rule34',
+			theme: 'default',
 			pixelated: true,
 			svg: false
 		});
@@ -21,7 +21,7 @@ async function getMoeCounterSvg() {
 		const data = await moecounter.remote({
 			name: 'test-12345',
 			length: 10,
-			theme: 'rule34',
+			theme: 'default',
 			pixelated: true,
 			svg: true
 		});

@@ -43,9 +43,9 @@ https://sefinek.net/npm/moecounter.js/demo
 ![](https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=moebooru&pixelated=true)  \
 `https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=moebooru&pixelated=true`
 
-### rule34
-![](https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=rule34&pixelated=true)  \
-`https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=rule34&pixelated=true`
+### default
+![](https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=default&pixelated=true)  \
+`https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=default&pixelated=true`
 
 
 ## 📃 Documentation
@@ -59,7 +59,7 @@ For the purposes of displaying any kind of statistics, the BELOW method is prefe
 #### options
 * `number` - `(default 0)`: The value you want to display on the counter.
 * `length` - `(default 10)`: The length of the counter.
-* `theme` - `(default rule34)`: The appearance of the counter.
+* `theme` - `(default default)`: The appearance of the counter.
 * `pixelated` - `(default true; recommended true)`: Should the counter be pixelated?
 * `svg` - `(default false; recommended false)`: Should the module provide SVG data?
 
@@ -73,7 +73,7 @@ If this limit is exceeded, the server will NOT return any HTTP error, but simply
 #### options
 * `name` - `(required)`: A unique counter name. It is best to choose a unique name that reflects the purpose of the counter. It's also a good idea to add random characters at the end, e.g., `mywebsiteviews-sM7JJb2trEr9`.
 * `length` - `(default 10)`: The length of the counter.
-* `theme` - `(default rule34)`: The appearance of the counter.
+* `theme` - `(default default)`: The appearance of the counter.
 * `pixelated` - `(default true; recommended true)`: Should the counter be pixelated?
 * `svg` - `(default false; recommended false)`: Should the module provide SVG data?
 
@@ -89,7 +89,7 @@ const showMoeCounter = async () => {
 	const data = await moecounter.local({
 		number: 1234567890,
 		length: 10,
-		theme: 'rule34',
+		theme: 'default',
 		pixelated: true,
 		svg: false
 	});
@@ -97,7 +97,7 @@ const showMoeCounter = async () => {
 	console.log(data);
 	// Output:
 	// {
-	// 	url: 'https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=rule34&pixelated=true&svg=false'
+	// 	url: 'https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=default&pixelated=true&svg=false'
 	// }
 }
 

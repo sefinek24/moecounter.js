@@ -2,7 +2,7 @@ declare module 'moecounter.js' {
     export interface SvgResult {
         /**
          * The URL to the generated image of the counter.
-         * @example `https://api.sefinek.net/api/v2/moecounter?number=0123456789&length=10&theme=rule34`
+         * @example `https://api.sefinek.net/api/v2/moecounter?number=0123456789&length=10&theme=default`
          */
         url: string;
 
@@ -28,7 +28,7 @@ declare module 'moecounter.js' {
 
         /**
          * The graphic theme of the counter (optional). Allows customization of the counter's appearance to match the style of the page.
-         * @default `rule34`
+         * @default `default`
          */
         theme?: string;
 
@@ -51,7 +51,7 @@ declare module 'moecounter.js' {
      * await moecounter.local({
      *     number: 1234567890,
      *     length: 10,
-     *     theme: 'rule34',
+     *     theme: 'default',
      *     pixelated: true
      * });
      * @param options Counter options, including the number to be displayed.
@@ -74,7 +74,7 @@ declare module 'moecounter.js' {
 
         /**
          * The number of `moe characters` on the counter. If the digit exceeds a certain size, the character limit will not apply. Optional.
-         * @default `rule34`
+         * @default `default`
          */
         theme?: string;
 
@@ -91,7 +91,7 @@ declare module 'moecounter.js' {
      * await moecounter.remote({
      *     name: 'test-12345',
      *     length: 10,
-     *     theme: 'rule34',
+     *     theme: 'default',
      *     pixelated: true
      * });
      * @param options Options, including the unique name of the counter.

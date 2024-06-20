@@ -5,7 +5,7 @@ async function showMoeCounter() {
 		const data = await moecounter.local({
 			number: 1234567890,
 			length: 10,
-			theme: 'rule34',
+			theme: 'default',
 			pixelated: true,
 			svg: false
 		});
