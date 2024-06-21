@@ -31,21 +31,21 @@ https://sefinek.net/npm/moecounter.js/demo
 
 
 ## 😸 Counters
-### asoul
+### Default (gif)
+![](https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=default&pixelated=true)  \
+`https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=default&pixelated=true`
+
+### Asoul
 ![](https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=asoul&pixelated=true)  \
 `https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=asoul&pixelated=true`
 
-### gelbooru
+### Gelbooru
 ![](https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=gelbooru&pixelated=true)  \
 `https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=gelbooru&pixelated=true`
 
-### moebooru
+### Moebooru
 ![](https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=moebooru&pixelated=true)  \
 `https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=moebooru&pixelated=true`
-
-### default
-![](https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=default&pixelated=true)  \
-`https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=default&pixelated=true`
 
 
 ## 📃 Documentation
@@ -115,7 +115,6 @@ It features improved rate limit handling and enhanced server-side code quality.
 
 ## 💙 Thank you
 If you like this module, please **star** ⭐ the [repository](https://github.com/sefinek24/moecounter.js).
-
 If you have any questions or need help, feel free to reach out to me via [email](https://sefinek.net) or open a new [Issue](https://github.com/sefinek24/moecounter.js/issues).
 
 
