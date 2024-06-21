@@ -39,13 +39,13 @@ https://sefinek.net/npm/moecounter.js/demo
 ![](https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=asoul&pixelated=true)  \
 `https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=asoul&pixelated=true`
 
-### Gelbooru
-![](https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=gelbooru&pixelated=true)  \
-`https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=gelbooru&pixelated=true`
-
 ### Moebooru
 ![](https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=moebooru&pixelated=true)  \
 `https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=moebooru&pixelated=true`
+
+### Gelbooru
+![](https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=gelbooru&pixelated=true)  \
+`https://api.sefinek.net/api/v2/moecounter?number=1234567890&length=10&theme=gelbooru&pixelated=true`
 
 
 ## 📃 Documentation
