@@ -1,4 +1,4 @@
-const apiUrl = 'https://api.sefinek.net/api/v2/mo1ecounter';
+const apiUrl = 'https://api.sefinek.net/api/v2/moecounter';
 const version = '1.0.8';
 const userAgent = `moecounter.js/${version} (+https://github.com/sefinek24/moecounter.js)`;
 
