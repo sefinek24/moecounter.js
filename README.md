@@ -16,7 +16,7 @@ It can be seamlessly used on any website or in applications that utilize WebView
 
 
 ## 📦 Installation
-### npm
+### NPM (Node.js)
 ```bash
 npm install moecounter.js
 ```
