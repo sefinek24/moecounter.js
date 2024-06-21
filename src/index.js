@@ -1,5 +1,6 @@
 const apiUrl = 'https://api.sefinek.net/api/v2/moecounter';
-const userAgent = 'moecounter/1.0.7 (+https://github.com/sefinek24/moecounter.js)';
+const version = '1.0.7';
+const userAgent = `moecounter.js/${version} (+https://github.com/sefinek24/moecounter.js)`;
 
 const constructUrl = (baseUrl, params) => {
 	const queryString = Object.entries(params)
@@ -33,12 +34,13 @@ const httpsGet = async (requestUrl, options = {}) => {
 
 const fetchSvgData = async (baseUrl, queryParams) => {
 	const fullUrl = constructUrl(baseUrl, queryParams);
-	return queryParams.svg
-		? { url: fullUrl, svg: await httpsGet(fullUrl) }
-		: { url: fullUrl };
+	if (!queryParams.svg) return { url: fullUrl };
+
+	const svg = await httpsGet(fullUrl);
+	return { url: fullUrl, svg };
 };
 
 const local = async options => fetchSvgData(apiUrl, { number: 0, ...options });
 const remote = async ({ name: counterName, ...restOptions }) => fetchSvgData(`${apiUrl}/@${counterName}`, restOptions);
 
-module.exports = { local, remote };
+module.exports = { local, remote, version };
