@@ -1,5 +1,5 @@
-const apiUrl = 'https://api.sefinek.net/api/v2/moecounter';
-const version = '1.0.7';
+const apiUrl = 'https://api.sefinek.net/api/v2/mo1ecounter';
+const version = '1.0.8';
 const userAgent = `moecounter.js/${version} (+https://github.com/sefinek24/moecounter.js)`;
 
 const constructUrl = (baseUrl, params) => {
@@ -10,25 +10,22 @@ const constructUrl = (baseUrl, params) => {
 	return `${baseUrl}?${queryString}`;
 };
 
-const httpsGet = async (requestUrl, options = {}) => {
+const httpsGet = async url => {
 	try {
-		const response = await fetch(requestUrl, {
+		const response = await fetch(url, {
 			method: 'GET',
 			headers: {
-				'User-Agent': userAgent,
-				...options.headers
-			},
-			...options
+				'User-Agent': userAgent
+			}
 		});
 
 		if (!response.ok) {
-			throw new Error(`HTTP error! status: ${response.status}`);
+			throw new Error(`Request failed. Status code: ${response.status} (${response.statusText})`);
 		}
 
 		return await response.text();
 	} catch (err) {
-		console.error('HTTPS GET request failed:', err);
-		throw err;
+		console.error(err);
 	}
 };
 
