@@ -1,6 +1,6 @@
 const moecounter = require('../src/index.js');
 
-async function showMoeCounter() {
+(async () => {
 	try {
 		const data = await moecounter.local({
 			number: 1234567890,
@@ -14,6 +14,4 @@ async function showMoeCounter() {
 	} catch (err) {
 		console.error(err);
 	}
-}
-
-showMoeCounter();
+})();
