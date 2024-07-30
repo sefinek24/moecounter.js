@@ -105,7 +105,7 @@ showMoeCounter();
 ```
 
 > [!NOTE]  
-> If you want to see a sample counter in action, please visit [this](https://sefinek.net/genshin-impact-reshade) page.
+> If you want to see a sample counter in action, please visit [this](https://sefinek.net/genshin-stella-mod) page.
 
 
 ## 🍴 Fork
